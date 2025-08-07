@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Comfortaa:wght@400;700&display=swap');
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Quicksand', 'Comfortaa', cursive, sans-serif;
+  background: linear-gradient(135deg, #f8e1f4 0%, #c1e7f7 50%, #f9f6e7 100%);
+  background-attachment: fixed;
+  color: #333;
+  transition: background 0.5s, color 0.5s;
+}
+
+.dream-filter label {
+  margin-right: 16px;
+  font-weight: 500;
+}
+
+h1 {
+  font-family: 'Comfortaa', 'Quicksand', cursive, sans-serif;
+  letter-spacing: 2px;
+  color: #7e5bef;
+  text-shadow: 0 2px 8px #e0c3fc88;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background: linear-gradient(135deg, #2d234a 0%, #3a3d5c 50%, #1a1a2e 100%);
+  color: #e0c3fc;
+}
+
+body.dark-mode h1 {
+  color: #e0c3fc;
+  text-shadow: 0 2px 16px #7e5befcc, 0 0 8px #e0c3fc88;
+}
+
+body.dark-mode .dream-filter label {
+  color: #e0c3fc;
+}
+
+body.dark-mode .dream-entry {
+  background: rgba(60, 40, 100, 0.7) !important;
+  box-shadow: 0 2px 16px #7e5bef44, 0 0 8px #e0c3fc33;
+  color: #e0c3fc !important;
+}
+
+body.dark-mode .dream-entry .dream-text {
+  color: #e0c3fc !important;
+}
+
+body.dark-mode .dream-entry .dream-date {
+  color: #e0c3fc !important;
+}
+
+body.dark-mode .dream-entry .dream-category {
+  color: #e0c3fc !important;
+}
+
+body.dark-mode .dream-entry .ai-summary {
+  color: #e0c3fc !important;
+}
+
+body.dark-mode .fade-in {
+  box-shadow: 0 0 16px #e0c3fc55, 0 0 8px #7e5bef33;
+}
+
+body.dark-mode .dream-forecast, body.dark-mode .dream-prompt {
+  background: rgba(60, 40, 100, 0.5) !important;
+  color: #e0c3fc;
+  box-shadow: 0 2px 16px #7e5bef44, 0 0 8px #e0c3fc33;
+}
+
+/* Fade-in animation for dream entries */
+.dream-entry {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Glowing button for dark mode toggle */
+.dark-toggle-btn {
+  background: #7e5bef;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 18px;
+  font-size: 1em;
+  box-shadow: 0 0 12px #e0c3fc88, 0 0 8px #7e5bef44;
+  cursor: pointer;
+  margin-bottom: 18px;
+  margin-top: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .dark-toggle-btn {
+  background: #e0c3fc;
+  color: #2d234a;
+  box-shadow: 0 0 16px #7e5befcc, 0 0 8px #e0c3fc88;
+}
